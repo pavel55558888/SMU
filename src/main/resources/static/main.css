@@ -132,7 +132,7 @@ footer{
     }
     100% {
         width: 490px;
-        height: 250px;
+        height: 200px;
         background: #fafafa;
         box-shadow: 40px 40px 40px #cccccc,
         0 0 0 #ffffff,
@@ -152,11 +152,12 @@ footer{
     border: 0px solid;
     box-shadow: 0 0 10px #444;
     width: calc(25% - 20px);
-    height: 300px;
+    height: 320px;
     margin: 10px;
     box-sizing: border-box;
+    background-color: white;
 }
-.div_card > button{
+.div_card > form > button{
     width: 100%;
     height: 50px;
     background-color: #000000;
@@ -166,34 +167,13 @@ footer{
     bottom: 0;
 }
 
-.div_card >h3{
+.div_card > h3{
     text-align: center;
 }
 
-.div_card > button:hover{
+.div_card > form > button:hover{
     background-color: #8C8C8C;
 }
-
-@media (max-width: 1200px) {
-    .div_card {
-        width: calc(33.3333% - 20px);
-    }
-}
-
-@media (max-width: 800px) {
-    .div_card {
-        width: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 600px) {
-    .div_card {
-        width: calc(100% - 20px);
-    }
-}
-
-
-
 .carousel-container {
     position: relative;
     overflow: hidden;
@@ -205,7 +185,7 @@ footer{
 }
 
 .carousel-item {
-    flex: 0 0 calc(43.33% - 20px);
+    flex: 0 0 calc(33.33% - 20px);
     margin: 0 5px;
     background-color: #f0f0f0;
     height: 120%;
@@ -230,30 +210,33 @@ footer{
     right: 10px;
 }
 
-form > input{
-    margin: 20px;
-    width: 200px;
+.form > input {
+    margin: 3vw;
+    width: 20vw;
     height: 50px;
-    border: solid 1px black; padding:0px 10px;
+    border: solid 1px black;
+    padding: 0 2vw;
 }
-form > button{
-    margin: 20px;
-    width: 220px;
+
+.form > button {
+    margin: 3vw;
+    width: 24vw;
     height: 50px;
     background-color: #000000;
     color: white;
 }
 
-form > button:hover{
+.form > button:hover {
     background-color: #8C8C8C;
 }
 
-form{
+.form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 
 .email {
     margin-top: 50px;
@@ -262,25 +245,199 @@ form{
 }
 
 .email_img, .email_form {
-    flex: 1; /* Делаем оба блока равной ширины */
-    margin-right: 10px; /* Добавляем немного отступа между блоками (можете изменить значение по вашему усмотрению) */
+    flex: 1;
+    margin-right: 10px;
 }
 
 .email_form{
-margin-top: 50px;
+    margin-top: 5%;
     width: 100%;
 }
 
 
 .email_img img {
-    max-width: 100%; /* Делаем изображение внутри .email_img блока растягивающимся на всю доступную ширину */
+    max-width: 100%;
 }
 
 .email_form form {
     display: flex;
-    flex-direction: column; /* Опционально, если вам нужно разместить элементы формы по вертикали */
+    flex-direction: column;
 }
 
 .email_form input, .email_form button {
-    margin-bottom: 10px; /* Опционально, чтобы добавить немного отступа между элементами формы */
+    margin-bottom: 2vh;
+}
+
+.info{
+    margin-top: 50px;
+    display: flex;
+}
+.div_info, .img_info {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.div_info{
+    padding-left: 20px;
+    width: 100%;
+}
+
+
+.img_info img {
+    max-width: 100%;
+    border: 0px solid;
+    box-shadow: 0 0 20px #444;
+}
+
+
+@media (max-width: 1200px) {
+    .div_card {
+        width: calc(33.3333% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .div_card {
+        width: calc(50% - 20px);
+        height: 280px;
+    }
+    .email_img {
+        max-width: 0%;
+    }
+    .email {
+        border: none;
+    }
+    @keyframes anime {
+        0% {
+            width: 60px;
+            height: 60px;
+            background: #f0f0f0;
+            box-shadow: 0 0 0 #cccccc,
+            0 0 0 #ffffff,
+            10px 10px 10px #cccccc inset,
+            -10px -10px 10px #ffffff inset;
+        }
+        25% {
+            width: 60px;
+            height: 60px;
+            background: #f8f8f8;
+            box-shadow: 10px 10px 10px #cccccc,
+            10px 10px 10px #ffffff,
+            0 0 0 #cccccc inset,
+            0 0 0 #ffffff inset;
+        }
+        50% {
+            width: 60px;
+            height: 240px;
+            background: #f8f8f8;
+            box-shadow: 10px 10px 10px #cccccc,
+            10px 10px 10px #ffffff,
+            0 0 0 #cccccc inset,
+            0 0 0 #ffffff inset;
+        }
+        100% {
+            width: 320px;
+            height: 320px;
+            background: #fafafa;
+            box-shadow: 40px 40px 40px #cccccc,
+            0 0 0 #ffffff,
+            0 0 0 #cccccc inset,
+            2px 2px 2px #ffffff inset;
+        }
+
+
+    }
+
+    .div_body{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .form > input {
+        margin: 3vw;
+        width: 49vw;
+        height: 50px;
+        border: solid 1px black;
+        padding: 0 2vw;
+    }
+
+    .form > button {
+        margin: 3vw;
+        width: 54vw;
+        height: 50px;
+        background-color: #000000;
+        color: white;
+    }
+
+    .logo_img{
+        width: 50%;
+    }
+
+    header nav {
+        display: flex;
+    }
+
+    header nav a {
+        margin-right: 12px;
+        text-decoration: none;
+        font-size: 10px;
+    }
+    .carousel-item {
+        flex: 0 0 calc(50% - 20px);
+        margin: 0 5px;
+        background-color: #f0f0f0;
+        height: 120%;
+    }
+
+    .info{
+        display: block;
+    }
+    .div_info{
+        margin: 0px;
+        padding: 0px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    @keyframes anime {
+        0% {
+            width: 60px;
+            height: 60px;
+            background: #f0f0f0;
+            box-shadow: 0 0 0 #cccccc,
+            0 0 0 #ffffff,
+            10px 10px 10px #cccccc inset,
+            -10px -10px 10px #ffffff inset;
+        }
+        25% {
+            width: 60px;
+            height: 60px;
+            background: #f8f8f8;
+            box-shadow: 10px 10px 10px #cccccc,
+            10px 10px 10px #ffffff,
+            0 0 0 #cccccc inset,
+            0 0 0 #ffffff inset;
+        }
+        50% {
+            width: 60px;
+            height: 240px;
+            background: #f8f8f8;
+            box-shadow: 10px 10px 10px #cccccc,
+            10px 10px 10px #ffffff,
+            0 0 0 #cccccc inset,
+            0 0 0 #ffffff inset;
+        }
+        100% {
+            width: 270px;
+            height: 400px;
+            background: #fafafa;
+            box-shadow: 40px 40px 40px #cccccc,
+            0 0 0 #ffffff,
+            0 0 0 #cccccc inset,
+            2px 2px 2px #ffffff inset;
+        }
+
+
+    }
 }
