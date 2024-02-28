@@ -1,4 +1,4 @@
-package com.example.smu.controller;
+package com.example.smu.Index;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

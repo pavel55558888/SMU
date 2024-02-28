@@ -290,9 +290,20 @@ footer{
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1150px) {
     .div_card {
         width: calc(33.3333% - 20px);
+    }
+}
+
+
+
+
+@media (min-width: 1200px) {
+    .div_card {
+        width: calc(25% - 20px);
+        height: 500px;
+
     }
 }
 

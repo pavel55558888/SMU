@@ -23,6 +23,11 @@
 
     <meta name="favicon" content="/image/logo2.jpg">
 
+    <style>
+        input.invalid {
+            border: 2px solid red;
+        }
+    </style>
 </head>
 <body>
 <div class="div_body">
@@ -31,11 +36,13 @@
 
 <main class="container">
 
+    <h2 style="text-align: center; font-size: 24px; margin: 30px 0px">SMU 36 - Работа любой сложности под ключ</h2>
+
     <div class="global_img">
         <img src="/image/global.jpg" alt="Извините, фото не найдено" style="width: 100%; height: 100%; margin: 0; padding: 0;">
     </div>
 
-    <h2 style="text-align: center; margin-bottom: 50px">Почему именно мы?</h2>
+    <h2 style="text-align: center; margin-bottom: 50px; margin-top: 30px;">Почему именно мы?</h2>
 
     <div class="box" style="margin-top: 20px; margin-bottom: 100px">
         <h4>Любые работы под ключ! Наш опыт и надежность. Мы работаем в сфере аренды спецтехники уже более 10 лет, за которые накопили обширный опыт и завоевали доверие клиентов. Наши специалисты обладают высоким профессионализмом и всегда готовы предоставить качественное обслуживание.
@@ -232,13 +239,40 @@
         </div>
 
         <div class="email_form">
-            <form action="" class="form">
-                <input type="text" placeholder="Введите имя" name="name">
-                <input type="tel" placeholder="Введите почту" name="email">
-                <button>Отправить</button>
+            <form action="/mail-send" method="post" class="form" onsubmit="return validateForm()">
+                <input type="text" placeholder="Введите имя" name="name" id="name" required>
+                <input type="tel" placeholder="Введите номер телефона" name="tel" id="tel" required>
+                <button type="submit">Отправить</button>
             </form>
         </div>
     </div>
+
+    <script>
+        function validateForm() {
+            var nameInput = document.getElementById("name");
+            var telInput = document.getElementById("tel");
+
+            if (nameInput.value.trim() === "") {
+                nameInput.classList.add("invalid");
+                nameInput.placeholder = "Введите данные";
+                return false;
+            } else {
+                nameInput.classList.remove("invalid");
+                nameInput.placeholder = "Введите имя";
+            }
+
+            if (telInput.value.trim() === "") {
+                telInput.classList.add("invalid");
+                telInput.placeholder = "Введите данные";
+                return false;
+            } else {
+                telInput.classList.remove("invalid");
+                telInput.placeholder = "Введите номер телефона";
+            }
+
+            return true;
+        }
+    </script>
 
 
     <h1 style="font-size: 20px; margin-top: 100px; margin-bottom: 30px; text-align: center">Добро пожаловать в SMU-36 – ваш надежный партнер в аренде спецтехники!

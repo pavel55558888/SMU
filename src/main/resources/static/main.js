@@ -43,7 +43,7 @@ function setScrollValues() {
     var scrollValues = {
         desktop: {
             specialEquipment: 1400,
-            onlineRequest: 3100,
+            onlineRequest: 3500,
             contacts: 6000
         },
         mobile: {
