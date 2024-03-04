@@ -12,12 +12,12 @@ public class MailController {
     private MailSender mailSender;
 
     @PostMapping("/mail-send")
-    public String sendEmail(@RequestParam String name,
-                            @RequestParam String tel) {
+    public String sendEmail(@RequestParam String tel,
+                            @RequestParam String text) {
         try {
-            String emailTo = "p-vikulinpbb@yandex.ru";
+            String emailTo = "smy_36@mail.ru";
             String subject = "Новая заявка с сайта SMU 36";
-            String message = "Вас просил перезвонить: " + name + "\n" + " На номер: " + tel;
+            String message = "Номер клиента: \n" + tel + "\n\n\n" + "Сообщение клиента: \n" + text;
             mailSender.send(emailTo, subject, message);
         } catch (Exception e) {
             e.printStackTrace();

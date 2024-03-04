@@ -2,26 +2,27 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>SMU 36 - Аренда спецтехники в Воронеже и Воронежской области</title>
+    <title>СМУ 36 - Аренда спецтехники в Воронеже и Воронежской области</title>
     <link rel="icon" href="/image/logo2.jpg" type="image/x-icon">
     <link rel="shortcut icon" href="/image/logo2.jpg" type="image/x-icon">
 
     <link rel="stylesheet" th:href="@{/main.css}">
+    <link rel="stylesheet" th:href="@{/global.scss}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="SMU 36 – это профессиональный сервис аренды спецтехники, который предоставляет широкий ассортимент качественной техники для решения различных задач на строительных площадках, дорожных работах и промышленных объектах. Мы стремимся обеспечить наших клиентов надежным оборудованием, оперативным сервисом и конкурентоспособными ценами.
-    У нас в аренде представлена разнообразная спецтехника, включая экскаваторы, погрузчики, бульдозеры, автокраны, самосвалы и многое другое. Независимо от масштаба проекта, наша техника обеспечит эффективное выполнение задач и поможет вам достичь желаемых результатов.">
+    <meta property="og:title" content="СМУ 36 – Аренда спецтехники в Воронеже и Воронежской области">
     <meta property="og:image" content="/image/logo2.jpg">
-    <meta property="og:url" content="https://reflection-vrn.ru/">
+    <meta property="og:url" content="https://smu-136.ru/">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SMU 36 - Аренда спецтехники в Воронеже и Воронежской области">
-    <meta name="twitter:description" content="SMU 36 – это профессиональный сервис аренды спецтехники, который предоставляет широкий ассортимент качественной техники для решения различных задач на строительных площадках, дорожных работах и промышленных объектах. Мы стремимся обеспечить наших клиентов надежным оборудованием, оперативным сервисом и конкурентоспособными ценами.
+    <meta name="twitter:title" content="СМУ 36 - Аренда спецтехники в Воронеже и Воронежской области">
+    <meta name="twitter:description" content="СМУ 36 – это профессиональный сервис аренды спецтехники, который предоставляет широкий ассортимент качественной техники для решения различных задач на строительных площадках, дорожных работах и промышленных объектах. Мы стремимся обеспечить наших клиентов надежным оборудованием, оперативным сервисом и конкурентоспособными ценами.
     У нас в аренде представлена разнообразная спецтехника, включая экскаваторы, погрузчики, бульдозеры, автокраны, самосвалы и многое другое. Независимо от масштаба проекта, наша техника обеспечит эффективное выполнение задач и поможет вам достичь желаемых результатов.">
     <meta name="twitter:image" content="/image/logo2.jpg">
 
     <meta name="favicon" content="/image/logo2.jpg">
+    <meta name="yandex-verification" content="3cca8fee4be13e1d" />
 
     <style>
         input.invalid {
@@ -36,11 +37,59 @@
 
 <main class="container">
 
-    <h2 style="text-align: center; font-size: 24px; margin: 30px 0px">SMU 36 - Работа любой сложности под ключ</h2>
+    <h1 style="text-align: center; font-size: 24px; margin: 30px 0px">СМУ 36 - Аренда спецтехники в Воронеже и Воронежской области</h1>
 
-    <div class="global_img">
-        <img src="/image/global.jpg" alt="Извините, фото не найдено" style="width: 100%; height: 100%; margin: 0; padding: 0;">
+    <div class="slideshow-container">
+        <div class="slideshow-content">
+            <div class="slide">
+                <img src="/image/global.jpg" alt="Изображение 1">
+                <div class="text-overlay">
+                    <p>СМУ 36 - Работа <br> любой сложности <br> под ключ!</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/image/global2.jpg" alt="Изображение 2">
+                <div class="text-overlay">
+                    <p>СМУ 36 - Работа <br> любой сложности <br> под ключ!</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/image/global3.jpg" alt="Изображение 3">
+                <div class="text-overlay">
+                    <p>СМУ 36 - Работа <br> любой сложности <br> под ключ!</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/image/global4.jpg" alt="Изображение 4">
+                <div class="text-overlay">
+                    <p>СМУ 36 - Работа <br> любой сложности <br> под ключ!</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="/image/global5.jpg" alt="Изображение 5">
+                <div class="text-overlay">
+                    <p>СМУ 36 - Работа <br> любой сложности <br> под ключ!</p>
+                </div>
+            </div>
+
+        </div>
     </div>
+
+    <script>
+        var slides = document.querySelectorAll('.slide');
+        var index = -1;
+        var slideshowContent = document.querySelector('.slideshow-content');
+
+        function nextSlide() {
+            index = (index + 1) % slides.length;
+            var offset = -index * 100;
+            slideshowContent.style.transform = 'translateX(' + offset + '%)';
+
+            setTimeout(nextSlide, 5000);
+        }
+
+        nextSlide();
+    </script>
 
     <h2 style="text-align: center; margin-bottom: 50px; margin-top: 30px;">Почему именно мы?</h2>
 
@@ -74,9 +123,9 @@
         </div>
         <div class = "div_card">
             <img src="/image/auto/автокран.jpg" alt="">
-            <h3>Автокран 35т+</h3>
+            <h3>Автокран</h3>
             <br>
-            <h3>От 12000 ₽/час</h3>
+            <h3>От 4000 ₽/час</h3>
             <form action="/truck-crane">
                 <button>Узнать больше</button>
             </form>
@@ -240,8 +289,8 @@
 
         <div class="email_form">
             <form action="/mail-send" method="post" class="form" onsubmit="return validateForm()">
-                <input type="text" placeholder="Введите имя" name="name" id="name" required>
-                <input type="tel" placeholder="Введите номер телефона" name="tel" id="tel" required>
+                <input type="tel" placeholder="Введите номер" name="tel" id="name" required>
+                <input type="text" placeholder="Введите сообщение" name="text" id="tel" required>
                 <button type="submit">Отправить</button>
             </form>
         </div>
@@ -267,7 +316,7 @@
                 return false;
             } else {
                 telInput.classList.remove("invalid");
-                telInput.placeholder = "Введите номер телефона";
+                telInput.placeholder = "Введите сообщение";
             }
 
             return true;
@@ -275,12 +324,12 @@
     </script>
 
 
-    <h1 style="font-size: 20px; margin-top: 100px; margin-bottom: 30px; text-align: center">Добро пожаловать в SMU-36 – ваш надежный партнер в аренде спецтехники!
+    <h1 style="font-size: 20px; margin-top: 100px; margin-bottom: 30px; text-align: center">Добро пожаловать в СМУ-36 – ваш надежный партнер в аренде спецтехники!
 
     </h1>
 
     <h1 style="font-size: 14px">
-        Аренда спецтехники в Воронеже и Воронежской области от компании "SMU-36".
+        Аренда спецтехники в Воронеже и Воронежской области от компании СМУ-36.
         Мы предлагаем широкий ассортимент качественной спецтехники для решения самых разнообразных задач на строительных площадках, дорожных работах, в сельском хозяйстве и промышленности. Наша компания осуществляет аренду техники как для крупных строительных компаний, так и для частных заказчиков, гарантируя надежность, качество оборудования и высокий уровень сервиса.
         <br><br><br>
     </h1>
@@ -319,8 +368,6 @@
         <br>
         <a href="https://api.whatsapp.com/send/?phone=79805326400">Наш номер: +7 (980) 532-64-00</a> <br>
         <a href="mailto:smy_36@mail.ru">Наша почта: smy_36@mail.ru</a>
-        <br>
-        Адрес: [Ваш адрес]
         <br><br>
         Мы работаем для вашего успеха!</h1>
     <br><br><br>

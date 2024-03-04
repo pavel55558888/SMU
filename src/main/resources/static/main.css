@@ -53,7 +53,7 @@ header .logo:hover{
     cursor: pointer;
 }
 
-.logo_img{width: 10%}
+.logo_img{width: 13%}
 
 header nav a {
     margin-left: 15px;
@@ -79,13 +79,73 @@ footer{
     box-shadow: 0 0 100px #444;
 }
 
-.global_img{
-    margin-left: -5.55%;
-    width: 111.15%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+@keyframes slideRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.slideshow-container {
+    overflow: hidden;
+    margin-left: -5.55%;
+    width: 111.13%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.slideshow-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.slide > img {
+    width: 111.13%;
+}
+
+.text-overlay {
+    animation: text-global 5.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.71);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.text-overlay p {
+    margin: 0;
+    font-size: 30px;
+}
+
+@keyframes text-global {
+    0%{
+        bottom: 5%;
+        left: 2%;
+    }
+
+    100%{
+        bottom: 40%;
+        left: 20%;
+    }
+}
 
 .box {
     border-radius: 20px;
@@ -284,7 +344,8 @@ footer{
 
 
 .img_info img {
-    max-width: 100%;
+    max-height: 100%;
+    padding: 0px;
     border: 0px solid;
     box-shadow: 0 0 20px #444;
 }
@@ -311,6 +372,11 @@ footer{
     .div_card {
         width: calc(50% - 20px);
         height: 280px;
+    }
+
+    .div_card > h3{
+        font-size: 14px;
+        padding: 0px 10px;
     }
     .email_img {
         max-width: 0%;
@@ -384,6 +450,7 @@ footer{
         width: 50%;
     }
 
+
     header nav {
         display: flex;
     }
@@ -407,6 +474,7 @@ footer{
         margin: 0px;
         padding: 0px;
     }
+
 
 }
 
@@ -452,3 +520,7 @@ footer{
 
     }
 }
+
+
+
+
