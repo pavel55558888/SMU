@@ -201,6 +201,30 @@ footer{
     }
 }
 
+.service_div{
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+}
+
+.service_div h2{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: white;
+}
+
+.div_card_service{
+    position: relative;
+    border: 0px solid;
+    box-shadow: 0 0 10px #444;
+    width: calc(33.333% - 20px);
+    height: 420px;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: black;
+}
 
 .div_card_container {
     display: flex;
@@ -520,7 +544,3 @@ footer{
 
     }
 }
-
-
-
-
