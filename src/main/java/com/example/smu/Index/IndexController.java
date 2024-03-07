@@ -69,4 +69,12 @@ public class IndexController {
     public String backhoeLoader(){
         return "auto/backhoe-loader";
     }
+    @GetMapping("/mixer")
+    public String mixer(){
+        return "auto/mixer";
+    }
+    @GetMapping("/concrete-pump")
+    public String concretePump(){
+        return "auto/concrete_pump";
+    }
 }
